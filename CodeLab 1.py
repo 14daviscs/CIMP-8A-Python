@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+#! /usr/bin/env python3
+import random
 
 print("BLACK JACK")
 print("Blackjack payout is 3:2")
@@ -14,8 +15,15 @@ print("Lose:             95.0")
 print()
 print("Bye!")
 
-player_start = 100
-player_bet = input(int() or float())
+playerStart = 100
+playerBet = 5
+playerEnd = 0
 
+blackjack = round(playerStart + playerBet * 1.5)
+win = round(playerStart + playerBet)
+push = round(playerStart * 1)
+lose = round(playerStart - playerBet)
 
-
+def play():
+    random.choice(blackjack, win, push, lose)
+    return print(f"You now have {playerEnd}. Thanks for playing!")
