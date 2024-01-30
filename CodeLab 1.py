@@ -15,15 +15,23 @@ print("Lose:             95.0")
 print()
 print("Bye!")
 
-playerStart = 100
-playerBet = 5
+playerStart = input(int() or float())
+playerBet = input(int() or float())
 playerEnd = 0
 
-blackjack = round(playerStart + playerBet * 1.5)
-win = round(playerStart + playerBet)
-push = round(playerStart * 1)
-lose = round(playerStart - playerBet)
+def blackjack():
+    playerEnd = round(playerStart + playerBet * 1.5)
+    return playerEnd
+def win():
+    playerEnd = round(playerStart + playerBet)
+    return playerEnd
+def push():
+    playerEnd = round(playerStart * 1)
+    return playerEnd
+def lose():
+    playerEnd = round(playerStart - playerBet)
+    return playerEnd
 
 def play():
-    random.choice(blackjack, win, push, lose)
-    return print(f"You now have {playerEnd}. Thanks for playing!")
+    random(blackjack(), win(), push(), lose())
+    return print(f"You now have {playerEnd} money. Thanks for playing!")
