@@ -1,0 +1,7 @@
+print("Hello World! Want to hear a joke?")
+print("")
+print("Why don’t oysters donate to charity?")
+print("")
+print("...")
+print("")
+print("They’re shellfish.")
