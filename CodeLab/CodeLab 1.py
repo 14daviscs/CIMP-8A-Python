@@ -1,37 +1,21 @@
 #! /usr/bin/env python3
-import random
 
-print("BLACK JACK")
+print("BLACKJACK!")
 print("Blackjack payout is 3:2")
 print()
-print("Starting money:   100")
-print("Bet amount:       5")
+
+player_start = float(input("Starting Money:    "))
+player_bet = float(input("Bet Amount:          "))
+
+blackjack = round(player_start + (player_bet * 1.5), 2)
+win = round(player_start + player_bet, 2)
+fold = round(player_start - player_bet, 2)
+
 print()
 print("ENDING MONEY FOR A...")
-print("Blackjack:        107.5")
-print("Win:              105.0")
-print("Push:             100.0")
-print("Lose:             95.0")
+print("Blackjack:        ", blackjack)
+print("Win:              ", win)
+print("Push:             ", player_start)
+print("Lose:             ", fold)
 print()
-print("Bye!")
-
-playerStart = input(int() or float())
-playerBet = input(int() or float())
-playerEnd = 0
-
-def blackjack():
-    playerEnd = round(playerStart + playerBet * 1.5)
-    return playerEnd
-def win():
-    playerEnd = round(playerStart + playerBet)
-    return playerEnd
-def push():
-    playerEnd = round(playerStart * 1)
-    return playerEnd
-def lose():
-    playerEnd = round(playerStart - playerBet)
-    return playerEnd
-
-def play():
-    random(blackjack(), win(), push(), lose())
-    return print(f"You now have {playerEnd} money. Thanks for playing!")
+print("See you next time!")
