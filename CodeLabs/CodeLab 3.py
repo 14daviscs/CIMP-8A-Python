@@ -3,6 +3,7 @@
 import random
 
 
+# begin the program
 def welcome():
     print("BLACKJACK!")
     print("Blackjack payout is 3:2")
@@ -10,6 +11,7 @@ def welcome():
     print()
 
 
+# determine results for each hand
 def hand():
     result = random.randint(1, 100)
     if result <= 5:
@@ -22,9 +24,11 @@ def hand():
         return "lose"
 
 
+# create a loop to be ended by the user
 def play_until_exit(player_money):
     while True:
-        player_bet = input("Bet amount: ")
+        player_bet = input("Bet Amount: ")
+
         if player_bet == 'x':
             break
         else:
@@ -45,14 +49,13 @@ def play_until_exit(player_money):
         print(f"Money: {int(player_money)}\n")
 
 
+# player_money is in main() so it persists through hands
 def main():
     welcome()
     player_money = float(input("Starting money:  "))
     print()
     play_until_exit(player_money)
+    print("Goodbye!")
 
 
 main()
-
-
-print("\nGoodbye!")
