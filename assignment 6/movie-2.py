@@ -16,9 +16,12 @@ def display_menu():
 
 # Add a new movie
 def add(movie_list):
-    movie = input("Movie: ")
+    title = input("Movie: ")
+    year = input("Year: ")
+    rating = input("Rating: ")
+    movie = [title, year, rating]
     movie_list.append(movie)
-    print(f"{movie} was added.\n")
+    print(f"{title} was added.\n")
 
 
 # Display movies in the list
@@ -34,14 +37,25 @@ def list_movies(movie_list):
 
 # Delete a movie from the list
 def delete(movie_list):
-    number = int(input("Movie Number: "))
-
-    # Test for valid movie number
+    number = int(input("Number: "))
     if number < 1 or number > len(movie_list):
         print("Invalid movie number.\n")
     else:
         movie = movie_list.pop(number - 1)
-        print(f"{movie} was deleted.\n")
+        print(f"{movie[0]} was deleted.\n")
+
+
+def find(movie_list):
+    title = input("Enter a movie title: ")
+    found = False
+    for movie in movie_list:
+        if movie[0].lower() == title.lower():
+            print(f"{movie[0]} was released in {movie[1]} and has an IMDB rating of {movie[2]}.\n")
+            found = True
+            break
+
+    if not found:
+        print(f"{title} was not found.\n")
 
 
 def main():
@@ -60,6 +74,8 @@ def main():
             add(movie_list)
         elif command == "del":
             delete(movie_list)
+        elif command == "find":
+            find(movie_list)
         elif command == "exit":
             break
         else:
