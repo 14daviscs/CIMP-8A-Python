@@ -1,3 +1,5 @@
+"""
+
 #!/usr/bin/env python3
 
 def storage():
@@ -24,3 +26,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
