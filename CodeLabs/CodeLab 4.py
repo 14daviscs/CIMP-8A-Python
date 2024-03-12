@@ -33,7 +33,7 @@ def play_until_exit(player_money):
         if player_bet == 'x':
             break
         elif int(player_bet) < 5:
-            print("ERROR: The minimum bet is 5.")
+            print("ERROR: The minimum bet is CodeLab 5 part 1.")
             continue
         elif int(player_bet) > 1000:
             print("ERROR: The maximum bet is 1000.")
@@ -68,7 +68,7 @@ def main():
     # Input validation for starting money
     while player_money < 5 or player_money > 10000:
         if int(player_money) < 5:
-            print("ERROR: the minimum starting money is 5.")
+            print("ERROR: the minimum starting money is CodeLab 5 part 1.")
         if int(player_money) > 10000:
             print("ERROR: The maximum starting money is 10,000.")
         player_money = float(input("Starting money:  "))

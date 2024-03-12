@@ -61,7 +61,7 @@ def find(movie_list):
 def main():
     # Create and initialize the movie list
     movie_list = [["Star Wars", "1980", "8.0"],
-                  ["The Empire Strikes Back", "1982", "8.5"],
+                  ["The Empire Strikes Back", "1982", "8.CodeLab 5 part 1"],
                   ["Return of the Jedi", "1984", "7.8"]]
 
     display_menu()

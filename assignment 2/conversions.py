@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-x = "5"
+x = "CodeLab 5 part 1"
 y = 3
 
 product = x * y

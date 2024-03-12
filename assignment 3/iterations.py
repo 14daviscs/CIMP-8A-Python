@@ -8,7 +8,7 @@ while choice.lower() == "y":
 print()
 
 counter = 0
-print("while Loop is < 5")
+print("while Loop is < CodeLab 5 part 1")
 while counter < 5:
     print(counter, end = " ")
     counter += 1
@@ -16,7 +16,7 @@ print("\nThe loop has ended")
 
 print()
 
-print("for Loop range 5")
+print("for Loop range CodeLab 5 part 1")
 for i in range(5):
     print(i, end = " ")
     counter += 1
@@ -24,7 +24,7 @@ print("\nThe loop has ended")
 
 print()
 
-print("for Loop range 5 to 10")
+print("for Loop range CodeLab 5 part 1 to 10")
 for i in range(5, 10):
     print(i, end = " ")
     counter += 1
