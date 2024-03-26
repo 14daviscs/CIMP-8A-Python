@@ -3,7 +3,6 @@
 import deck
 
 
-# begin the program
 def display_header():
     print("BLACKJACK!")
     print("Blackjack payout is 3:2")
@@ -11,7 +10,6 @@ def display_header():
     print()
 
 
-# determine results for each hand
 def get_starting_amount():
     while True:
         player_money = float(input("Starting player money: "))
@@ -93,7 +91,6 @@ def display_outcome(player_points, player_hand, dealer_points, dealer_hand, bet_
     return player_money
 
 
-# player_money is in main() so it persists through hands
 def main():
     display_header()
     player_money = get_starting_amount()
